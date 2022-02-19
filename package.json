@@ -1,0 +1,22 @@
+{
+  "name": "weatherproject",
+  "version": "1.0.0",
+  "description": "Simple weather app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NPitroff/Simple-Weather-Project.git"
+  },
+  "author": "NIcolai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NPitroff/Simple-Weather-Project/issues"
+  },
+  "homepage": "https://github.com/NPitroff/Simple-Weather-Project#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
