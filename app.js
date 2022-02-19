@@ -1,14 +1,20 @@
 const express = require("express");
 // native method to call api with node
 const https = require("https");
+const bodyParser = require("body-parser");
 const app = express();
 
+app.use(bodyParser.urlencoded({extended:true}));
 
 
 app.get("/", function(req, res){
   res.sendFile(__dirname + "/index.html");
 
-})
+});
+
+app.post("/", function(req, res){
+  console.log("Post received");
+});
 
 // // var to hold the query city
 // const query = "Rialto";
