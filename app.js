@@ -16,7 +16,9 @@ app.get("/", function(req, res){
       // console.log(weatherDescription);
       const feelsLike = weatherData.main.feels_like;
       // console.log(feelsLike);
-      res.send("<h1>The Temperature in Rialto is "+ temp + " degrees Farenheit</h1>")
+      res.write("<h1>The Temperature in Rialto is "+ temp + " degrees Farenheit</h1>");
+      res.write("<h2>Today calls for "+weatherDescription+ "'s</h2>")
+      res.end();
     })
 
 
