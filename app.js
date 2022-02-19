@@ -12,11 +12,16 @@ app.get("/", function(req, res){
     response.on("data", function(data){
       const weatherData = JSON.parse(data);
       const temp = weatherData.main.temp;
+      const weatherDescription = weatherData.weather[0].description;
+      // console.log(weatherDescription);
       const feelsLike = weatherData.main.feels_like;
-      console.log(feelsLike);
+      // console.log(feelsLike);
+      res.send("<h1>The Temperature in Rialto is "+ temp + " degrees Farenheit</h1>")
     })
+
+
   })
-  res.send("Server is up and running");
+
 })
 
 
