@@ -13,11 +13,14 @@ app.get("/", function(req, res){
       const weatherData = JSON.parse(data);
       const temp = weatherData.main.temp;
       const weatherDescription = weatherData.weather[0].description;
+      // variable to hold icon
+      const icon = "http://openweathermap.org/img/wn/"+weatherData.weather[0].icon+".png"
       // console.log(weatherDescription);
       const feelsLike = weatherData.main.feels_like;
       // console.log(feelsLike);
       res.write("<h1>The Temperature in Rialto is "+ temp + " degrees Farenheit</h1>");
-      res.write("<h2>Today calls for "+weatherDescription+ "'s</h2>")
+      res.write("<h2>Today calls for "+weatherDescription+ "</h2>")
+      res.write("<img id=wicon src="+icon+" alt=Weather icon>");
       res.end();
     })
 
